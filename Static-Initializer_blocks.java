@@ -1,9 +1,11 @@
+
 import java.util.*;
 
 public class Solution {
     static int area;
     static int b;
     static int h;
+    static boolean test;
      static {
         Scanner sc=new Scanner(System.in);   
         b=sc.nextInt();
@@ -11,16 +13,22 @@ public class Solution {
         
         sc.close();
         
-        if(b>=0 &&h>=0){
+        if(b>0 &&h>0){
             area=b*h;
+           test=true;
             }
         else{
-           System.out.println("java.lang.Exception: Breadth and height must be positive"); 
+           test=false;
         }    
         }
 
     public static void main(String[] args) {
-       if (b > 0 && h > 0) System.out.println(area);
+       if (test) 
+       System.out.println(area);
+       
+       else {
+           System.out.println("java.lang.Exception: Breadth and height must be positive");
+           } 
         
     }
 }
